@@ -1,2 +1,2 @@
-add_lunch_combo full_hermes-userdebug
+add_lunch_combo henonhd_hermes-userdebug
 
