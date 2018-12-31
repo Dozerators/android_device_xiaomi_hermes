@@ -6,7 +6,7 @@ patch -p1 < ../../device/xiaomi/hermes/patches/rildaemon.patch
 patch -p1 < ../../device/xiaomi/hermes/patches/surfaceflinger.patch
 patch -p1 < ../../device/xiaomi/hermes/patches/voltage.patch
 patch -p1 < ../../device/xiaomi/hermes/patches/yellow_led.patch
-cd ..
+cd ../..
 cd system/sepolicy
 patch -p1 < ../../device/xiaomi/hermes/patches/sepolicy.patch
 cd ../..

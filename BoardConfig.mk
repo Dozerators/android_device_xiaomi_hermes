@@ -62,7 +62,7 @@ BOARD_USES_LEGACY_MTK_AV_BLOB := true
 MTK_PQ_SUPPORT := PQ_HW_VER_2
 BOARD_USES_MTK_JPEG_HW_DECODER := true
 ARCH_ARM_HAVE_NEON := true
-MTK_PATH_SOURCE := device/xiaomi/hermes/mtk
+MTK_PATH_SOURCE := device/xiaomi/hermes/mediatek
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
@@ -72,7 +72,7 @@ TARGET_CPU_MEMCPY_OPT_DISABLE := true
 #TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 
 # Display and other display related
-BOARD_EGL_CFG := $(LOCAL_PATH)/mtk/egl.cfg
+BOARD_EGL_CFG := $(LOCAL_PATH)/mediatek/egl.cfg
 #TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 #NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 #TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true

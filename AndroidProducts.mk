@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_hermes.mk
+    $(LOCAL_DIR)/full_hermes.mk

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,28 +18,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common AOSP-OMS stuff.
-$(call inherit-product, vendor/aosp/common.mk)
-
-# Inherit some common AOSP stuff.
-TARGET_ARCH := arm64
-TARGET_DENSITY := xxhdpi
-TARGET_BOOT_ANIMATION_RES := 1080
-
-# Boot animation
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 1920
-
-# Inherit from hermes device
+# Inherit from kipper device
 $(call inherit-product, device/xiaomi/hermes/device.mk)
 
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hermes
-PRODUCT_NAME := aosp_hermes
+PRODUCT_NAME := full_hermes
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi Note 2
+PRODUCT_MODEL := hermes
 PRODUCT_MANUFACTURER := Xiaomi
-
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-#BUILD_FINGERPRINT := "Xiaomi/hermes/hermes:5.0.2/LRX22G/V9.6.3.0.LHMMIFD:user/release-keys"
-#PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="hermes-user 5.0.2 LRX22G V9.6.3.0.LHMMIFD release-keys"
