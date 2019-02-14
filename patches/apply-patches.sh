@@ -1,39 +1,40 @@
 #!/bin/bash
 cd ../../../..
 cd system/core
-patch -p1 < ../../device/xiaomi/hermes/patches/libnetutils.patch
-patch -p1 < ../../device/xiaomi/hermes/patches/rildaemon.patch
-patch -p1 < ../../device/xiaomi/hermes/patches/surfaceflinger.patch
-patch -p1 < ../../device/xiaomi/hermes/patches/voltage.patch
-patch -p1 < ../../device/xiaomi/hermes/patches/yellow_led.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/system/core/0012-PATCH-xen0n-some-MTK-services-e.g.-ril-daemon-mtk-re.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/system/core/sepolicy_reallow.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/system/core/surfaceflinger.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/system/core/voltage.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/system/core/yellow_led.patch
 cd ..
-cd system/sepolicy
-patch -p1 < ../../device/xiaomi/hermes/patches/sepolicy.patch
+cd media
+patch -p1 < ../../device/xiaomi/hermes/patches/system/media/0001-FM-Radio-support-of-LP-audio-hal-1-3.patch
+cd ..
+cd netd
+patch -p1 < ../../device/xiaomi/hermes/patches/system/netd/ap0_hotspot.patch
 cd ../..
-cd bionic
-patch -p1 < ../device/xiaomi/hermes/patches/libc.patch
-patch -p1 < ../device/xiaomi/hermes/patches/no-stack-protector.patch
-cd ..
 cd frameworks/av
-patch -p1 < ../../device/xiaomi/hermes/patches/audioflinger.patch
-patch -p1 < ../../device/xiaomi/hermes/patches/camera.patch
-patch -p1 < ../../device/xiaomi/hermes/patches/camera_temp.patch
-patch -p1 < ../../device/xiaomi/hermes/patches/minijail.patch
-patch -p1 < ../../device/xiaomi/hermes/patches/stagefright.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/av/0001-Add-mtk-camera-profiles.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/av/0001-Add-support-of-YUV-and-some-cam-stuff.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/av/audioflinger.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/av/decoders.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/av/minijail.patch
+cd ..
+cd base
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/base/0001-FM-Radio-support-of-miui-LP-audio-hal-2-3.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/base/hwui.patch
+cd ..
+cd native
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/native/0001-Add-support-of-YUV-color-profiles-2-2.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/native/mtk_bits.patch
+patch -p1 < ../../device/xiaomi/hermes/patches/frameworks/native/native.patch
 cd ../..
-cd frameworks/base
-patch -p1 < ../../device/xiaomi/hermes/patches/hwui.patch
+cd packages/apps/FMRadio
+patch -p1 < ../../device/xiaomi/hermes/patches/packages/apps/FMRadio/FMRadio.patch
+cd ../../..
+cd prebuilts/sdk
+patch -p1 < ../../device/xiaomi/hermes/patches/prebuilts/sdk/0001-FM-Radio-support-of-miui-LP-audio-hal-3-3.patch
 cd ../..
-cd frameworks/native
-patch -p1 < ../../device/xiaomi/hermes/patches/frameworks_native.patch
-cd ../..
-cd system/netd
-patch -p1 < ../../device/xiaomi/hermes/patches/ap0_hotspot.patch
-cd ../..
-cd hardware/libhardware
-patch -p1 < ../../device/xiaomi/hermes/patches/hardware_libhardware.patch
-cd ../..
-
 
 
 
